@@ -14,34 +14,24 @@ const CommentsSection: React.FC = () => {
         </p>
       </FadeIn>
 
-      <FadeIn delay={0.1} className="w-full max-w-5xl">
-        <div className="bg-[#111111] p-6 sm:p-10 rounded-3xl border border-white/5 shadow-[0_0_40px_rgba(182,0,168,0.05)] backdrop-blur-sm relative overflow-hidden">
-          {/* Dekoratif Arka Plan Efekti */}
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#b600a8] rounded-full blur-[120px] opacity-20 pointer-events-none"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#7621b0] rounded-full blur-[120px] opacity-20 pointer-events-none"></div>
-          
-          <div className="relative z-10">
-            <Giscus
-              id="comments"
-              repo="Abdulkadir-karatas/kadirweb"
-              repoId="R_kgDOS1tVAA"
-              category="General"
-              categoryId="DIC_kwDOS1tVAM4C-32d"
-              mapping="pathname"
-              strict="0"
-              term="Welcome to my portfolio!"
-              reactionsEnabled="1"
-              emitMetadata="0"
-              inputPosition="top"
-              theme="dark_high_contrast"
-              lang="tr"
-              loading="lazy"
-            />
-          </div>
-          
-          <div className="mt-8 pt-6 border-t border-white/5 text-xs text-[#D7E2EA]/40 text-center">
-            * Yorum yapabilmek için GitHub hesabınızla giriş yapmanız gerekmektedir. Giscus yorumları doğrudan GitHub Discussions üzerinden yönetilir.
-          </div>
+      <FadeIn delay={0.1} className="w-full max-w-4xl">
+        <div className="w-full">
+          <Giscus
+            id="comments"
+            repo="Abdulkadir-karatas/kadirweb"
+            repoId="R_kgDOS1tVAA"
+            category="General"
+            categoryId="DIC_kwDOS1tVAM4C-32d"
+            mapping="pathname"
+            strict="0"
+            term="Welcome to my portfolio!"
+            reactionsEnabled="1"
+            emitMetadata="0"
+            inputPosition="top"
+            theme="transparent_dark"
+            lang="tr"
+            loading="lazy"
+          />
         </div>
       </FadeIn>
     </section>
