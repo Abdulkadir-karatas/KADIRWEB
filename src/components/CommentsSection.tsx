@@ -23,16 +23,17 @@ const CommentsSection: React.FC = () => {
           <div className="relative z-10">
             <Giscus
               id="comments"
-              repo="KULLANICI_ADI/REPO_ADI" // TODO: Buraya kendi GitHub kullanıcı adınızı ve repo adınızı yazın (Örn: "kullanici/repo")
-              repoId="REPO_ID_BURAYA" // TODO: Giscus'tan aldığınız Repo ID
-              category="General" // TODO: Giscus'tan aldığınız Kategori adı
-              categoryId="KATEGORI_ID_BURAYA" // TODO: Giscus'tan aldığınız Kategori ID
+              repo="Abdulkadir-karatas/kadirweb"
+              repoId="R_kgDOS1tVAA"
+              category="General"
+              categoryId="DIC_kwDOS1tVAM4C-32d"
               mapping="pathname"
+              strict="0"
               term="Welcome to my portfolio!"
               reactionsEnabled="1"
               emitMetadata="0"
               inputPosition="top"
-              theme="transparent_dark"
+              theme="dark_high_contrast"
               lang="tr"
               loading="lazy"
             />
