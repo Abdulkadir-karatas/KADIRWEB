@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react'
-import { Mail } from 'lucide-react'
 import FadeIn from './FadeIn'
 
 const ContactSection: React.FC = () => {
