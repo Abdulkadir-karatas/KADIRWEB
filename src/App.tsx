@@ -6,7 +6,6 @@ import ServicesSection from './components/ServicesSection'
 import ProjectsSection from './components/ProjectsSection'
 import CertificatesSection from './components/CertificatesSection'
 import ContactSection from './components/ContactSection'
-import CommentsSection from './components/CommentsSection'
 import FooterSection from './components/FooterSection'
 
 const App: React.FC = () => {
@@ -22,7 +21,6 @@ const App: React.FC = () => {
       <ProjectsSection />
       <CertificatesSection />
       <ContactSection />
-      <CommentsSection />
       <FooterSection />
     </div>
   )
