@@ -1,6 +1,6 @@
 import React, { useRef, Suspense, useState, useEffect } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, useGLTF, useAnimations } from '@react-three/drei'
+import { OrbitControls, useGLTF, useAnimations, Html } from '@react-three/drei'
 import * as THREE from 'three'
 import FadeIn from './FadeIn'
 import ContactButton from './ContactButton'
@@ -129,15 +129,7 @@ const HeroModel: React.FC = () => {
 }
 
 useGLTF.preload('/model/model (3).glb')
-useGLTF.preload('/model.glb')
-useGLTF.preload('/model/model (4).glb')
-useGLTF.preload('/model/model (5).glb')
-useGLTF.preload('/model/model (6).glb')
-useGLTF.preload('/model/model (7).glb')
-useGLTF.preload('/model/model (8).glb')
-useGLTF.preload('/model/model (9).glb')
-useGLTF.preload('/model/model (10).glb')
-useGLTF.preload('/model/model (11).glb')
+// Diğer modeller tıklandıkça yüklenecek (performans ve bant genişliği için preload kaldırıldı)
 
 // ── Daktilo Animasyon Bileşeni ───────────────────────────────────────────────
 const TypewriterText: React.FC = () => {
@@ -320,7 +312,14 @@ const HeroSection: React.FC = () => (
 
 
           <ModelErrorBoundary>
-            <Suspense fallback={null}>
+            <Suspense fallback={
+              <Html center>
+                <div className="flex flex-col items-center justify-center space-y-3">
+                  <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-full border-2 border-t-[#b600a8] border-r-[#7621b0] border-b-transparent border-l-transparent animate-spin"></div>
+                  <span className="text-[#D7E2EA]/60 text-xs sm:text-sm tracking-wider uppercase font-medium">Model Yükleniyor...</span>
+                </div>
+              </Html>
+            }>
               <HeroModel />
             </Suspense>
           </ModelErrorBoundary>
