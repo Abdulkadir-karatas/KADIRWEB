@@ -100,23 +100,26 @@ const ContactSection: React.FC = () => {
   return (
     <section id="iletisim" className="bg-[#0C0C0C] rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 sm:-mt-12 md:-mt-14 relative z-30 px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32 flex flex-col items-center">
       <FadeIn>
-        <h2 className="hero-heading font-black uppercase leading-none text-center mb-16 sm:mb-20 md:mb-28 tracking-[0.1em]" style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}>
-          {activeTab === 'contact' ? 'İLETİŞİM' : 'YORUMLAR'}
-        </h2>
+        {/* Başlık alanı yüksekliği sabitlendi ki metin değişince sayfa zıplamasın */}
+        <div className="flex items-center justify-center min-h-[120px] sm:min-h-[160px] mb-16 sm:mb-20 md:mb-28">
+          <h2 className="hero-heading font-black uppercase leading-none text-center tracking-[0.1em]" style={{ fontSize: 'clamp(3rem, 12vw, 160px)' }}>
+            {activeTab === 'contact' ? 'İLETİŞİM' : 'YORUMLAR'}
+          </h2>
+        </div>
       </FadeIn>
 
-      <FadeIn delay={0.1} className="w-full max-w-6xl relative flex items-center justify-center">
+      <FadeIn delay={0.1} className="w-full max-w-6xl relative flex flex-col sm:block">
         
-        {/* Sol Ok */}
+        {/* Sol Ok - Yukarı Taşındı ve Rengi Düzenlendi */}
         <button 
           onClick={toggleTab}
-          className="absolute left-0 md:-left-12 lg:-left-20 z-20 text-yellow-400 hover:text-white hover:scale-110 transition-all duration-300 hidden sm:block p-2"
+          className="absolute left-0 md:-left-12 lg:-left-20 top-1/3 -translate-y-1/2 z-20 text-[#D7E2EA]/40 hover:text-white hover:scale-110 transition-all duration-300 hidden sm:block p-2"
           aria-label="Önceki sekme"
         >
-          <ChevronLeft size={64} strokeWidth={2} />
+          <ChevronLeft size={64} strokeWidth={1.5} />
         </button>
 
-        <div className="w-full max-w-5xl px-0 sm:px-12 transition-all duration-500 min-h-[400px]">
+        <div className="w-full max-w-5xl mx-auto px-0 sm:px-12 transition-all duration-500 min-h-[400px]">
           {activeTab === 'contact' ? (
             <form ref={form} onSubmit={sendEmail} className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 animate-in fade-in duration-500">
               {/* Sol Sütun - Girdiler */}
@@ -226,22 +229,22 @@ const ContactSection: React.FC = () => {
           )}
         </div>
 
-        {/* Sağ Ok */}
+        {/* Sağ Ok - Yukarı Taşındı ve Rengi Düzenlendi */}
         <button 
           onClick={toggleTab}
-          className="absolute right-0 md:-right-12 lg:-right-20 z-20 text-yellow-400 hover:text-white hover:scale-110 transition-all duration-300 hidden sm:block p-2"
+          className="absolute right-0 md:-right-12 lg:-right-20 top-1/3 -translate-y-1/2 z-20 text-[#D7E2EA]/40 hover:text-white hover:scale-110 transition-all duration-300 hidden sm:block p-2"
           aria-label="Sonraki sekme"
         >
-          <ChevronRight size={64} strokeWidth={2} />
+          <ChevronRight size={64} strokeWidth={1.5} />
         </button>
 
         {/* Mobil için alt kontrol okları */}
-        <div className="w-full flex justify-center gap-12 mt-12 sm:hidden absolute -bottom-16">
-          <button onClick={toggleTab} className="text-yellow-400 hover:text-white">
-            <ChevronLeft size={48} />
+        <div className="w-full flex justify-center gap-12 mt-12 sm:hidden relative z-20">
+          <button onClick={toggleTab} className="text-[#D7E2EA]/40 hover:text-white">
+            <ChevronLeft size={48} strokeWidth={1.5} />
           </button>
-          <button onClick={toggleTab} className="text-yellow-400 hover:text-white">
-            <ChevronRight size={48} />
+          <button onClick={toggleTab} className="text-[#D7E2EA]/40 hover:text-white">
+            <ChevronRight size={48} strokeWidth={1.5} />
           </button>
         </div>
 
