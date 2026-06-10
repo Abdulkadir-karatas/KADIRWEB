@@ -110,10 +110,10 @@ const ContactSection: React.FC = () => {
 
       <FadeIn delay={0.1} className="w-full max-w-6xl relative flex flex-col sm:block">
         
-        {/* Sol Ok - Yukarı Taşındı ve Rengi Düzenlendi */}
+        {/* Sol Ok - Rengi Mor Yapıldı */}
         <button 
           onClick={toggleTab}
-          className="absolute left-0 md:-left-12 lg:-left-20 top-1/3 -translate-y-1/2 z-20 text-[#D7E2EA]/40 hover:text-white hover:scale-110 transition-all duration-300 hidden sm:block p-2"
+          className="absolute left-0 md:-left-12 lg:-left-20 top-1/3 -translate-y-1/2 z-20 text-[#b600a8] hover:text-[#7621b0] hover:drop-shadow-[0_0_15px_rgba(182,0,168,0.6)] hover:scale-110 transition-all duration-300 hidden sm:block p-2"
           aria-label="Önceki sekme"
         >
           <ChevronLeft size={64} strokeWidth={1.5} />
@@ -229,10 +229,10 @@ const ContactSection: React.FC = () => {
           )}
         </div>
 
-        {/* Sağ Ok - Yukarı Taşındı ve Rengi Düzenlendi */}
+        {/* Sağ Ok - Rengi Mor Yapıldı */}
         <button 
           onClick={toggleTab}
-          className="absolute right-0 md:-right-12 lg:-right-20 top-1/3 -translate-y-1/2 z-20 text-[#D7E2EA]/40 hover:text-white hover:scale-110 transition-all duration-300 hidden sm:block p-2"
+          className="absolute right-0 md:-right-12 lg:-right-20 top-1/3 -translate-y-1/2 z-20 text-[#b600a8] hover:text-[#7621b0] hover:drop-shadow-[0_0_15px_rgba(182,0,168,0.6)] hover:scale-110 transition-all duration-300 hidden sm:block p-2"
           aria-label="Sonraki sekme"
         >
           <ChevronRight size={64} strokeWidth={1.5} />
@@ -240,10 +240,10 @@ const ContactSection: React.FC = () => {
 
         {/* Mobil için alt kontrol okları */}
         <div className="w-full flex justify-center gap-12 mt-12 sm:hidden relative z-20">
-          <button onClick={toggleTab} className="text-[#D7E2EA]/40 hover:text-white">
+          <button onClick={toggleTab} className="text-[#b600a8] hover:text-[#7621b0] hover:drop-shadow-[0_0_15px_rgba(182,0,168,0.6)] transition-all duration-300">
             <ChevronLeft size={48} strokeWidth={1.5} />
           </button>
-          <button onClick={toggleTab} className="text-[#D7E2EA]/40 hover:text-white">
+          <button onClick={toggleTab} className="text-[#b600a8] hover:text-[#7621b0] hover:drop-shadow-[0_0_15px_rgba(182,0,168,0.6)] transition-all duration-300">
             <ChevronRight size={48} strokeWidth={1.5} />
           </button>
         </div>
