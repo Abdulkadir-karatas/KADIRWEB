@@ -208,7 +208,7 @@ const ContactSection: React.FC = () => {
               </div>
             </form>
           ) : (
-            <div className="w-full animate-in fade-in duration-500">
+            <div className="w-full h-[400px] sm:h-[450px] overflow-y-auto custom-scrollbar pr-2 animate-in fade-in duration-500">
               <Giscus
                 id="comments"
                 repo="Abdulkadir-karatas/kadirweb"
