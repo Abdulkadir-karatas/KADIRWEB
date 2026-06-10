@@ -208,23 +208,25 @@ const ContactSection: React.FC = () => {
               </div>
             </form>
           ) : (
-            <div className="w-full h-[400px] sm:h-[450px] overflow-y-auto custom-scrollbar pr-2 animate-in fade-in duration-500">
-              <Giscus
-                id="comments"
-                repo="Abdulkadir-karatas/kadirweb"
-                repoId="R_kgDOS1tVAA"
-                category="General"
-                categoryId="DIC_kwDOS1tVAM4C-32d"
-                mapping="pathname"
-                strict="0"
-                term="Welcome to my portfolio!"
-                reactionsEnabled="1"
-                emitMetadata="0"
-                inputPosition="top"
-                theme="transparent_dark"
-                lang="tr"
-                loading="lazy"
-              />
+            <div className="w-full h-[500px] md:h-[600px] overflow-y-auto custom-scrollbar pr-4 animate-in fade-in duration-500">
+              <div className="py-2">
+                <Giscus
+                  id="comments"
+                  repo="Abdulkadir-karatas/kadirweb"
+                  repoId="R_kgDOS1tVAA"
+                  category="General"
+                  categoryId="DIC_kwDOS1tVAM4C-32d"
+                  mapping="pathname"
+                  strict="0"
+                  term="Welcome to my portfolio!"
+                  reactionsEnabled="1"
+                  emitMetadata="0"
+                  inputPosition="top"
+                  theme="transparent_dark"
+                  lang="tr"
+                  loading="lazy"
+                />
+              </div>
             </div>
           )}
         </div>
